@@ -1,0 +1,23 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+aiosqlite
+alembic
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+httpx
+aiofiles
+numpy
+opencv-python
+Pillow
+python-dotenv
+pydantic
+pydantic-settings
+torch
+torchvision
+pytorchvideo
+av
+bcrypt==4.0.1
+# tensorflow
+# onnxruntime
