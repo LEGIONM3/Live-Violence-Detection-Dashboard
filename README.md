@@ -12,6 +12,31 @@ A real-time AI-powered violence detection and monitoring system designed to enha
 *   **incident History**: Logs detection events and live sessions for audit and review.
 *   **API-First Design**: Built with FastAPI for high performance and easy integration.
 
+## 🧠 AI & Machine Learning Models
+
+This project implements multiple state-of-the-art architectures for Video Action Recognition to ensure robust detection of violent activities:
+
+1.  **ViolenceConv3D (C3D)**
+    *   A 3D Convolutional Neural Network (CNN) that processes video frames as a 3D volume (Time x Height x Width).
+    *   Effectively captures spatial and temporal features simultaneously.
+    *   *Best for:* General violence detection with balanced performance.
+
+2.  **SlowFast Network**
+    *   Implements the SlowFast architecture (by Facebook AI Research), which uses two parallel pathways:
+        *   **Slow Pathway**: Low frame rate, captures spatial semantics.
+        *   **Fast Pathway**: High frame rate, captures motion at fine temporal resolution.
+    *   *Best for:* Detecting rapid motions and fighting scenes.
+
+3.  **ViolenceGRU (CNN + RNN)**
+    *   Combines a 2D CNN (feature extractor) with a Gated Recurrent Unit (GRU).
+    *   The CNN extracts features from each frame, and the GRU analyzes the sequence of features over time.
+    *   *Best for:* Longer temporal dependencies and analyzing sequence progression.
+
+4.  **Two-Stream Network**
+    *   Processes RGB frames (for appearance) and Optical Flow (for motion) separately.
+    *   Fuses the results from both streams for a final prediction.
+    *   *Best for:* High-accuracy scenarios where motion patterns are critical.
+
 ## 🛠️ Tech Stack
 
 ### Backend
